@@ -41,6 +41,10 @@ body {
   margin: 0 auto;
 }
 
+.section-padding {
+  padding: 8rem 0;
+}
+
 .btn {
   background-color: var(--color-dark);
   color: var(--color-white);
@@ -183,4 +187,26 @@ nav {
 
 .hero-right img {
   width: 80%;
+}
+
+/* SPONSORS STYLES */
+.sponsors {
+  display: flex;
+  gap: 5rem;
+}
+
+.sponsors .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsors .img img {
+  width: 100%;
+  filter: grayscale(1) brightness(0.3) opacity(0.3);
+  transition: 0.5s;
+}
+
+.sponsors .img:hover img {
+  filter: grayscale(0) brightness(1) opacity(1);
 }
