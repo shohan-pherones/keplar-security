@@ -132,6 +132,10 @@ nav {
   width: 100%;
 }
 
+.toggle-btn {
+  display: none;
+}
+
 /* HERO STYLES */
 .hero {
   margin-top: 8rem;
@@ -437,7 +441,8 @@ nav {
 }
 
 .btn-about,
-.btn-form {
+.btn-form,
+.close-download-btn {
   font-size: inherit;
   cursor: pointer;
 }
@@ -501,6 +506,50 @@ textarea {
   border-color: var(--color-orange);
 }
 
+/* DOWNLOAD MODAL STYLES */
+.download-modal {
+  height: 40rem;
+  max-width: 60rem;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.02);
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.download-modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  opacity: 0;
+}
+
 footer {
   text-align: center;
   padding: 10rem;
@@ -554,6 +603,69 @@ footer {
 @media screen and (max-width: 768px) {
   html {
     font-size: 50%;
+  }
+
+  .menu-links {
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    font-size: 4rem;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  .menu-links.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .toggle-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .toggle-btn span {
+    width: 30px;
+    height: 2px;
+    border-radius: 50px;
+    background-color: var(--color-dark);
+    display: inline-block;
+    transition: 0.5s;
+  }
+
+  .toggle-btn span:nth-child(2) {
+    width: 20px;
+  }
+
+  .toggle-btn.active span:nth-child(2) {
+    transform: translateX(5rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .toggle-btn.active span:nth-child(1) {
+    transform-origin: left;
+    transform: rotate(45deg);
+  }
+
+  .toggle-btn.active span:nth-child(3) {
+    transform-origin: left;
+    transform: rotate(-45deg);
   }
 
   .hero-left h1 {
