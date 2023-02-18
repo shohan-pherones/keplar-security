@@ -388,3 +388,45 @@ nav {
 .pricings-wrapper .pricing-card:nth-child(2) .fa-check {
   color: #fff;
 }
+
+/* ABOUT STYLES */
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.about-row {
+  display: flex;
+  gap: 10rem;
+}
+
+.img-col {
+  flex: 1;
+}
+
+.img-col img {
+  width: 100%;
+}
+
+.text-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.text-col h3 {
+  font-size: 4.2rem;
+  font-weight: 400;
+}
+
+.text-col p {
+  color: var(--color-dark-2);
+}
+
+.btn-about {
+  font-size: inherit;
+  cursor: pointer;
+}
