@@ -88,7 +88,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 97;
   background-color: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px);
 }
@@ -525,7 +525,7 @@ textarea {
   align-items: center;
   gap: 2rem;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.02);
-  z-index: 999;
+  z-index: 100;
   visibility: hidden;
   opacity: 0;
   transition: 0.5s;
@@ -541,7 +541,7 @@ textarea {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  z-index: 998;
+  z-index: 99;
   top: 0;
   left: 0;
   right: 0;
@@ -615,7 +615,7 @@ footer {
     background-color: var(--color-white);
     font-size: 4rem;
     position: fixed;
-    z-index: 1001;
+    z-index: 98;
     top: 0;
     left: 0;
     right: 0;

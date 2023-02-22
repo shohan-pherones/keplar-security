@@ -63,6 +63,11 @@ function overlayModalHide(modalName) {
     packageModal.classList.remove("active");
   }
 
+  if (modalName === "both") {
+    downloadModal.classList.remove("active");
+    packageModal.classList.remove("active");
+  }
+
   overlay.style.visibility = "hidden";
   overlay.style.opacity = 0;
 }
@@ -103,7 +108,7 @@ packageDownloadBtn.addEventListener("click", () => {
 
 // OVERLAY EVENT
 overlay.addEventListener("click", () => {
-  overlayModalHide();
+  overlayModalHide("both");
 });
 
 // KEYDOWN EVENT ON DOCUMENT
