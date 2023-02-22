@@ -507,7 +507,8 @@ textarea {
 }
 
 /* DOWNLOAD MODAL STYLES */
-.download-modal {
+.download-modal,
+.package-modal {
   height: 40rem;
   max-width: 60rem;
   background-color: #fff;
@@ -530,7 +531,8 @@ textarea {
   transition: 0.5s;
 }
 
-.download-modal.active {
+.download-modal.active,
+.package-modal.active {
   visibility: visible;
   opacity: 1;
 }
